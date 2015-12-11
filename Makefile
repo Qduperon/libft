@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 11:29:17 by qduperon          #+#    #+#              #
-#    Updated: 2015/12/10 18:58:20 by qduperon         ###   ########.fr        #
+#    Updated: 2015/12/11 15:40:09 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,17 +76,19 @@ SRC = ft_atoi.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 
+OBJ = $(SRC:.c=.o)
+
 FLAGS = -Werror -Wextra -Wall
 
 all: $(NAME)
-	
+
 $(NAME):
 	gcc $(FLAGS) -c $(SRC)
-	ar -r $(NAME) *.o
+	ar -r $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

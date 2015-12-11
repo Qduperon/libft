@@ -6,7 +6,7 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 18:49:53 by qduperon          #+#    #+#             */
-/*   Updated: 2015/12/10 18:57:22 by qduperon         ###   ########.fr       */
+/*   Updated: 2015/12/11 15:25:40 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrev(char *str)
 {
-	char tmp;
-	size_t i;
-	size_t lenght;
+	char	tmp;
+	size_t	i;
+	size_t	lenght;
 
 	i = 0;
 	lenght = ft_strlen(str);
