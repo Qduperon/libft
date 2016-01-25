@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 11:29:17 by qduperon          #+#    #+#              #
-#    Updated: 2016/01/25 19:19:54 by qduperon         ###   ########.fr        #
+#    Updated: 2016/01/25 19:59:46 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -170,20 +170,28 @@ FLAGS = -Werror -Wextra -Wall
 all: $(NAME)
 
 $(NAME):
+	@echo "\033[32mBegin Compilation...\033[00m"
 	gcc $(FLAGS) -c $(SRC_TEST) $(SRC_LIST) $(SRC_MEMORY) \
 		$(SRC_PRINT) $(SRC_STRING) $(SRC_UTILITY) -I ./includes
+	@echo "\033[31mCompilation Sucessfull"
+	@echo "\033[32mBegin Library...\033[00m"
 	ar -r $(NAME) $(OBJECTS)
 	ranlib $(NAME)
+	@echo "\033[31mLibrary Finished\033[00m"
 
 #============================================================#
 #                     //  DELETING  \\                       #
 #============================================================#
 
 clean:
+	@echo "\033[35mDeleting Objects...\033[00m"
 	rm -f $(OBJECTS)
+	@echo "\033[31mDone\033[00m"
 
 fclean: clean
+	@echo "\033[35mDeleting Library...\033[00m"
 	rm -f $(NAME)
+	@echo "\033[31Done\033[00m"
 
 #============================================================#
 #	     			   //  RETRY  \\                         #
