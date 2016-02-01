@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 11:29:17 by qduperon          #+#    #+#              #
-#    Updated: 2016/01/25 20:07:40 by qduperon         ###   ########.fr        #
+#    Updated: 2016/02/01 18:06:52 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -177,6 +177,8 @@ $(NAME):
 	@echo "\033[32mBegin Library...\033[00m"
 	ar -r $(NAME) $(OBJECTS)
 	ranlib $(NAME)
+	mkdir Temporary
+	mv $(OBJECTS) Temporary	
 	@echo "\033[31mLibrary Finished\033[00m"
 
 #============================================================#
@@ -185,7 +187,7 @@ $(NAME):
 
 clean:
 	@echo "\033[35mDeleting Objects...\033[00m"
-	rm -f $(OBJECTS)
+	rm -rf Temporary
 	@echo "\033[31mDone\033[00m"
 
 fclean: clean
