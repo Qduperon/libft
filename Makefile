@@ -6,7 +6,7 @@
 #    By: qduperon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/27 11:29:17 by qduperon          #+#    #+#              #
-#    Updated: 2016/02/01 18:06:52 by qduperon         ###   ########.fr        #
+#    Updated: 2016/02/08 15:15:49 by qduperon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ SRC_UTILITY	=	utility/ft_atoi.c \
 				utility/ft_size_base.c \
 	  			utility/ft_tolower.c \
 	  			utility/ft_toupper.c \
+				utility/get_next_line.c \
 
 #================================================================#
 #                       //  OBJECTS  \\                          #
@@ -156,6 +157,7 @@ OBJECTS		=	ft_atoi.o \
 				ft_strtrim.o \
 				ft_tolower.o \
 				ft_toupper.o \
+				get_next_line.o \
 
 #============================================================#
 #                      //  FLAGS  \\                         #

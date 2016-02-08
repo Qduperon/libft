@@ -6,12 +6,15 @@
 /*   By: qduperon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 10:15:14 by qduperon          #+#    #+#             */
-/*   Updated: 2015/12/10 19:01:28 by qduperon         ###   ########.fr       */
+/*   Updated: 2016/02/08 15:14:28 by qduperon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define BUFF_SIZE 32
+# define MAX_FD 256
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -59,6 +62,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					get_next_line(const int fd, char **line);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 size_t				ft_strlen(const char *src);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
